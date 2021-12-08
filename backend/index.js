@@ -12,8 +12,13 @@ if (!IS_PROD_ENV) {
   console.log('env dev vars:', result.parsed)
 }
 
+// init mongoose connection
+require('./services/mongoose-connection')
+
 const cors = require('cors')
 const express = require('express')
+const { errorHandler } = require('./middleware/errorHandler.middleware.js')
+
 
 const app = express()
 const port = process.env.PORT || 9000;
@@ -28,6 +33,9 @@ app.get('/', (req, res) => {
 
 const mainRouter = require('./main.routes')
 app.use('/api', mainRouter);
+
+// Always last (global error handler)
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`app is listening at http://localhost:${port}`)

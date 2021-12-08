@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "e981b223-4370-4b45-a9b4-6d4d229e6aa3",
+		"name": "Lids",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}",
+					"host": [
+						"{{apiUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/api/students",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"student\": {\r\n        \"fullname\": \"Lidia\",\r\n        \"email\": \"Lidia@gmail.com\",\r\n        \"faculty\": \"Hogwarts\",\r\n        \"dateofBirth\": \"01/01/1990\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/api/students",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/api/students/61b112da3d6d4e5ecb0000b7",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"api",
+						"students",
+						"61b112da3d6d4e5ecb0000b7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

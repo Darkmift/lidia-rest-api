@@ -1,0 +1,32 @@
+@import 'table.css'; /* Using a string */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+main {
+  min-width: 60vw;
+  max-width: 80vw;
+  min-height: 60vh;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-top: 5vh;
+  padding: 2vmin;
+}
+
+body,
+.flex-center-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
